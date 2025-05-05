@@ -1,0 +1,37 @@
+services:
+  sqlserver:
+    build:
+      context: ./mssql-docker
+      dockerfile: Dockerfile
+    container_name: recipe-sql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+      SA_PASSWORD: ${SA_PASSWORD}
+    ports:
+      - "1433:1433"
+    networks:
+      - recipe-network
+    volumes:
+      - sql_data:/var/opt/mssql
+
+  webapi:
+    build:
+      context: ./recipe-docker
+      dockerfile: Dockerfile
+    container_name: recipe-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: Server=recipe-sql;Database=recipeAPI;User Id=SA;Password=${SA_PASSWORD};TrustServerCertificate=True;
+    ports:
+      - "8080:8080"
+    depends_on:
+      - sqlserver
+    networks:
+      - recipe-network
+
+volumes:
+  sql_data:
+
+networks:
+  recipe-network:
