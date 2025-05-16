@@ -11,7 +11,7 @@ using recipeAPI.Data;
 namespace recipeAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250504223924_InitialCreate")]
+    [Migration("20250516211635_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
