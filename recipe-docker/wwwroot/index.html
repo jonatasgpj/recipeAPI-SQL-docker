@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Receitas do Dia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold text-orange-500">Receitas do Dia</h1>
+      <nav class="space-x-4">
+        <a href="#inicio" class="text-gray-700 hover:text-orange-500">Início</a>
+        <a href="#populares" class="text-gray-700 hover:text-orange-500">Populares</a>
+        <a href="#como-funciona" class="text-gray-700 hover:text-orange-500">Como Funciona</a>
+        <a href="#cadastro" class="text-orange-500 font-semibold hover:underline">Criar Conta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-24">
+
+    <!-- Hero -->
+    <section id="inicio" class="bg-orange-100 py-20 px-6 text-center">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Receitas do Dia</h2>
+      <p class="text-xl md:text-2xl mb-6 max-w-xl mx-auto">Descubra receitas deliciosas, compartilhe suas criações e inspire-se todos os dias.</p>
+      <a href="#cadastro" class="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition">Comece Agora</a>
+    </section>
+
+    <!-- Receitas Populares (sem imagens) -->
+    <section id="populares" class="py-16 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-semibold text-center mb-12">Receitas Populares</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-md rounded-2xl p-6">
+          <h3 class="text-xl font-bold mb-2">Macarrão ao Molho Alfredo</h3>
+          <p class="text-gray-600">Uma receita clássica e cremosa que agrada a todos os gostos.</p>
+        </div>
+        <div class="bg-white shadow-md rounded-2xl p-6">
+          <h3 class="text-xl font-bold mb-2">Salada Mediterrânea</h3>
+          <p class="text-gray-600">Leve, refrescante e cheia de sabor. Ideal para os dias quentes.</p>
+        </div>
+        <div class="bg-white shadow-md rounded-2xl p-6">
+          <h3 class="text-xl font-bold mb-2">Bolo de Chocolate Úmido</h3>
+          <p class="text-gray-600">O favorito da galera: fofinho por dentro, crocante por fora.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section id="como-funciona" class="bg-gray-100 py-16 px-6">
+      <h2 class="text-3xl font-semibold text-center mb-12">Como Funciona</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-orange-500 text-4xl mb-4">🔍</div>
+          <h3 class="font-bold text-xl mb-2">Explore</h3>
+          <p>Pesquise receitas por ingredientes, tempo de preparo ou tipo de refeição.</p>
+        </div>
+        <div>
+          <div class="text-orange-500 text-4xl mb-4">🍳</div>
+          <h3 class="font-bold text-xl mb-2">Cozinhe</h3>
+          <p>Siga o passo a passo com fotos e dicas práticas para não errar.</p>
+        </div>
+        <div>
+          <div class="text-orange-500 text-4xl mb-4">📸</div>
+          <h3 class="font-bold text-xl mb-2">Compartilhe</h3>
+          <p>Publique suas receitas e mostre seu talento para toda a comunidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testemunhos -->
+    <section class="py-16 px-6 max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-12">O que dizem nossos usuários</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <blockquote class="bg-white p-6 rounded-2xl shadow">
+          <p class="italic mb-4">"Desde que conheci o site, minha rotina na cozinha ficou muito mais criativa!"</p>
+          <footer class="text-sm font-bold text-orange-500">— Ana Clara, estudante</footer>
+        </blockquote>
+        <blockquote class="bg-white p-6 rounded-2xl shadow">
+          <p class="italic mb-4">"Adoro compartilhar minhas receitas e ver o feedback das outras pessoas!"</p>
+          <footer class="text-sm font-bold text-orange-500">— João Pedro, cozinheiro amador</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cadastro" class="bg-orange-500 text-white py-20 text-center px-6">
+      <h2 class="text-3xl font-bold mb-4">Junte-se à nossa comunidade de apaixonados por comida</h2>
+      <p class="mb-6">Crie sua conta gratuitamente e comece a explorar milhares de receitas.</p>
+      <a href="/cadastro" class="bg-white text-orange-500 px-6 py-3 rounded-full font-semibold hover:bg-orange-100 transition">Criar Conta</a>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-800 text-gray-300 py-8 px-6 text-center">
+    <p class="mb-2">&copy; 2025 Receitas do Dia. Todos os direitos reservados.</p>
+    <nav class="space-x-4">
+      <a href="#inicio" class="hover:text-white">Início</a>
+      <a href="#populares" class="hover:text-white">Populares</a>
+      <a href="#como-funciona" class="hover:text-white">Como Funciona</a>
+      <a href="#cadastro" class="hover:text-white">Criar Conta</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
